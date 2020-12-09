@@ -3,7 +3,9 @@ const thumbimg = document.getElementsByClassName('thumb-img');
 const thumbbar = document.getElementById('thumb-bar');
 const button = document.getElementsByTagName('button');
 const effect = document.getElementById('effect');
+const inputbar = document.getElementById('inputbar');
 
+var togglestate = 1;
 
 function loadpics(){
     var tempimg;
@@ -21,6 +23,7 @@ function mouseover(filepath){
     var splitpath = filepath.split('/');
     console.log(splitpath[splitpath.length - 1]);
     displayimg.src = 'images/' + splitpath[splitpath.length - 1];
+    toggleinputbar();
 }
 
 function submit(){
@@ -39,8 +42,25 @@ function submit(){
 
 }
 
+function toggleinputbar(){
+
+    if(togglestate == 1){
+
+        inputbar.style.display = 'none';
+        togglestate = 0;
+
+    }else{
+
+        inputbar.style.display ='flex';
+        }
+
+}
+
+
 
 function main(){
+
+    toggleinputbar();
     loadpics();
 
     button[0].addEventListener('click', submit);
