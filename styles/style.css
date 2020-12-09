@@ -1,3 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html * {
+    font-family: Montserrat;
+    color: black;
+}
+
+
+
+
 div img {
     width: 20%;
 }
+
+#inputbar {
+    display: flex;
+    flex-direction: column;
+}
+
+#inputbar *{
+    align-self: center;
+}
+
+body * {
+    text-align: center;
+
+}
+
+body{
+    max-width:80%;
+    padding: 0 10% 0 10%;
+}
+
+label{
+    flex-grow: 2;
+}
+
+#displayed-img{
+    max-width: 100%;
+}
+
+@media screen and (min-width: 640px) {
+
+    #inputbar {
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    #inputbar *{
+        margin: 20px;
+    }
+
+    body{
+        max-width: 640px;
+    }
+}
+
